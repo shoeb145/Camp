@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const ejsMate = require("ejs-mate");
 const path = require("path");
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
@@ -13,6 +14,8 @@ mongoose.connection.on(
 mongoose.connection.once("open", () => {
   console.log("database connected");
 });
+
+app.engine("ejs", ejsMate);
 
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));

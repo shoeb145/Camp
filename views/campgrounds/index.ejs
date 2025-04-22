@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>campground</title>
-</head>
-
-<body>
+<% layout('layout/boilerplate') %>
     <h1>campgrounds</h1>
     <div><a href="/campgrounds/new">add campground</a></div>
     <% for(campground of campgrounds) { %>
@@ -18,6 +9,3 @@
         </li>
 
         <% } %>
-</body>
-
-</html>
